@@ -1,75 +1,63 @@
-const televisor = prompt("TELEVISOR DE:  'Ingrese con números cuantas pulgadas' ")
-let a = 45000
-let b = 66000
-let c = 90000
-let index = 1
-const pago = parseInt(prompt ("en cuantas cuotas va a pagar  'en números'"))
-function dividir (numero1 ,numero2){
-    return numero1 / numero2
+
+// OBJETOS
+
+class Producto {
+    constructor(tipo,nombre, precio){
+    this. tipo = tipo
+    this.nombre = nombre;
+    this.precio = precio;
+    
 }
-switch (televisor) {
-    case "32":
-       alert ("el precio es de $ " + a)
-       if (pago === 1) {
-           alert ("En efectivo tiene un 10 % de descuento")
-       }
-       else if (pago === 3) {
-          for (let index = 1; index <= 3; index++) {
-           alert ("cuota " + index +" es = a: " + dividir (a , 3));
-           } 
-       }
-       else if (pago === 6){
-        for (let index = 1; index <= 6; index++) {
-            alert ("cuota " + index +" es = a: " + dividir( a , 6));
-            } 
-       }
-       else{
-        alert ("escoja entre 1, 3 y 6 pagos")
-       }
+}
+let completa = new Producto ("Burguer"," Hamburguesa Completa", "$ 1100", )
+let cabrona = new Producto("Burguer", " Hamburguesa Cabrona", "$ 1250")
+let pesadilla = new Producto("Burguer", "Hamburguesa Pesadilla", "$ 1350")
+let cabron = new Producto ("Lomo", "Lomito Cabron",  "$ 1500")
+let completo = new Producto ("Lomo", "Lomito Completo", "$ 1350")
+let mila = new Producto ("Sandwich", "Sandwich de Mila", "$ 1200")
+let padris = new Producto (" Sandwich", "Sandwich Padrisimo", "$ 1400")
+let papas = new Producto ("Papas", "Papas Cabronas", "$ 950")
+let chedar = new Producto ("Papas", "Chedar & Bacon", "$ 1100")
 
-        break;
-    case "43":
-        alert ("el precio es de $ " + b)
-        if (pago === 1) {
-            alert ("En efectivo tiene un 10 % de descuento")
-        }
-        else if (pago === 3) {
-           for (let index = 1; index <= 3; index++) {
-            alert ("cuota " + index +" es = a: " + dividir(b , 3));
-            } 
-        }
-        else if (pago === 6){
-            for (let index = 1; index <= 6; index++) {
-                alert ("cuota " + index +" es = a: " + dividir(b , 6));
-                } 
-           }
-           else{
-            alert  ("escoja entre 1, 3 y 6 pagos")
-           }
-        break;
-    case "50":
-        alert ("el precio es de $ " + c)
-        if (pago === 1) {
-            alert ("En efectivo tiene un 10 % de descuento")
-        }
-        else if (pago === 3) {
-           for (let index = 1; index <= 3; index++) {
-            alert ("cuota " + index +" es = a: " + dividir(c , 3));
-            } 
-        }
-        else if (pago === 6){
-            for (let index = 1; index <= 6; index++) {
-                alert ("cuota " + index +" es = a: " + dividir(c , 6));
-                } 
-           }
-           else{
-            alert ("escoja entre 1, 3 y 6 pagos")
-           }
-        break;
+// ARRAYS
 
+const Burguer = [completa,cabrona,pesadilla]
+const Lomos = [completo,cabron]
+const Sandwich = [mila,padris]
+const Papas = [papas,chedar]
+
+let seleccion = prompt ("Que producto estas buscando? \n Burguer \n Lomos \n Sandwich \n Papas")
+
+
+
+switch (seleccion) {
+    case "Burguer":
+        Burguer.forEach((Burguer) =>{
+            alert  ("La " + Burguer.nombre +" Tiene un precio de :  " + Burguer.precio)   
+        })
+         break;
+
+     case "Lomos":
+         Lomos.forEach((Lomos) =>{
+            alert  ("El " + Lomos.nombre +" Tiene un precio de :  " + Lomos.precio) 
+        })
+         break;
+
+    case "Sandwich" :
+         Sandwich.forEach((Sandwich) =>{
+            alert ("El "+ Sandwich.nombre + " Tiene un precio de :  " + Sandwich.precio )
+         })
+         break;
+
+     case "Papas" :
+         Papas.forEach((Papas) =>{
+             alert ("Las "+ Papas.nombre + " Tiene un precio de :  " + Papas.precio )
+         })
+         break;
     default:
-        alert ("no tenemos stock en este momento")
+        alert ("No tenemos esa opcion, escoja otra")
         break;
 }
+
 
 
