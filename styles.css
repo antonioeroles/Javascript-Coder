@@ -1,6 +1,15 @@
-.titulo {
-    color: rgb(42, 31, 31);
-    margin: 5px 20px;
-    padding: 20px;
-    font-size: 3rem;
+
+.logo {
+    width: 110px;
+    height: 110px;
+}
+.fondo-titulo {
+    background-image: url(https://api.quefeimmallorca.es/api/Containers/que-feim/download/fb92eac8-1dbe-4bf1-90f8-5348cedf26ae.jpg)
+}
+.fondo-main {
+    background-color: darkslategrey;
+}
+.logito {
+    width: 50px;
+    height: 50px;
 }

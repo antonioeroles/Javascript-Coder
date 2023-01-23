@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,35 +12,126 @@
 
     <!--BOOTSTRAP-->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- NOMBRE EN LA PESTAÑA -->
 
     <title>Cabrones Foods & Drinks</title>
 
+    <!--iconos de bootstrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     <!--ESTILOS CSS -->
-    
+
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body class="container-fluid fondo-main">
 
     <!--Barra de Navegacion-->
 
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
         <div class="container-fluid">
-          <img src="images/multimedia/logo.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
-           
+            <a class="navbar-brand" href="#"><img class="logo" src="/images/multimedia/logo.jpg" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-2" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-2" href="#">Burguers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-2" href="#">Lomos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-2" href="#">Papas</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="d-flex flex-row-reverse me-5">
+                <a href="">
+                    <img class="logito" src="https://cdn-icons-png.flaticon.com/512/711/711897.png" alt="carrito"> 0
+                </a>
+                
+            </div>
+            
         </div>
-        <header>
-            <h2 class="titulo">
-                Cabrones Food & Drinks
-            </h2>
-        </header>
-      </nav>
-    
+    </nav>
+
+        <!-- Titulo Principal-->
 
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <section class="fondo-titulo  ">
+        <h1 class="d-flex justify-content-center text-light ">* CABRONES *</h1>
+        <h2 class="d-flex justify-content-center text-light">Food & Drinks</h2>
+    </section>
+
+        <!--Cards con los Productos-->
+
+
+    <main class="mt-5 row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/multimedia/BurgerCabrona.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-center ">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-secondary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/multimedia/BurgerCompleta.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-center">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-secondary d-flex justify-content-center ">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/multimedia/HambPesadilla.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title d-flex justify-content-center">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-secondary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <!--Footer-->
+
+    <footer class="mt-5 mb-5">
+        <section>
+            <div>
+                <img class="logito ms-3" src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="facebook">
+                <img class="logito ms-3 me-3" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="instagram">
+                <img class="logito ms-5" src="https://cdn-icons-png.flaticon.com/512/1383/1383269.png" alt="whatsup">
+            </div>
+            <h4 class="mt-5 mb-5 d-flex justify-content-center">© Cabrones 2023</h4>
+        </section>
+    </footer>
+
+        <!--Script -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
 </body>
+
 </html>
