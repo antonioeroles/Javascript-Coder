@@ -60,7 +60,7 @@ const cartillas = document.querySelector ("#cartillas")
                     <div class="card-body">
                         <h3 class="card-title d-flex justify-content-center ">${el.nombre}</h3>
                         <h4 class="card-text text-success-emphasis d-flex justify-content-center ">${el.precio}</h4>
-                        <button id="btn" class="btn btn-secondary">Agregar al carrito</button>
+                        <button id="btn${el.id}" class="btn btn-secondary">Agregar al carrito</button>
                         
                        
                     </div>
@@ -68,13 +68,16 @@ const cartillas = document.querySelector ("#cartillas")
             </div>
         </main>
         `
-         cartillas.append (div)  
+         cartillas.append(div)  
     })
-    const boton = document.getElementById ("btn")
+    const boton =document.getElementById(`btn${el.id}`)
+    Lomos.forEach((el) =>{
+        boton.addEventListener("click",()=>{
+            console.log("hicieron click en los botones")
+            })
+    })
 
-boton.addEventListener ("click",(el)=>{
-console.log ("hicieron click en los botones")
-})
+
 
     
 
