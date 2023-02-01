@@ -4,7 +4,8 @@
     height: 110px;
 }
 .fondo-titulo {
-    background-image: url(https://api.quefeimmallorca.es/api/Containers/que-feim/download/fb92eac8-1dbe-4bf1-90f8-5348cedf26ae.jpg)
+    background-image: url(https://api.quefeimmallorca.es/api/Containers/que-feim/download/fb92eac8-1dbe-4bf1-90f8-5348cedf26ae.jpg);
+    height: 300px;
 }
 .fondo-main {
     background-color: darkslategrey;
@@ -18,3 +19,4 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
