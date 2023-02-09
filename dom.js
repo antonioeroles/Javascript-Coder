@@ -25,11 +25,11 @@ Lomos.forEach((lomo) => {
     let div = document.createElement("div")
     div.classList.add("col")
     div.innerHTML = `
-                <div id="lomo-${lomo.id}" class="card" style="width: 24rem;">
-                    <img src="${lomo.imagen}" class="card-img-top" alt="...">
+                <div id="lomo-${lomo.id}" class="card" style="width: 20rem;">
+                    <img src="${lomo.imagen}" class="card-img-top" alt="fotos">
                     <div class="card-body">
                         <h3 class="card-title d-flex justify-content-center ">${lomo.nombre}</h3>
-                        <h4 class="card-text text-success-emphasis d-flex justify-content-center ">${lomo.precio}</h4>
+                        <h4 class="card-text text-success-emphasis d-flex justify-content-center "> $ ${lomo.precio}</h4>
                         <button class="btn btn-secondary">Agregar al carrito</button>
                         
                        
@@ -43,6 +43,9 @@ Lomos.forEach((lomo) => {
         const productoEnElCarrito = carrito.find((productoCarrito) => productoCarrito.id === lomo.id)
 
         const cantidad = (productoEnElCarrito?.cantidad || 0) + 1
+        const saveLocal = () =>{
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+        }
 
         if (productoEnElCarrito) {
             productoEnElCarrito.cantidad = cantidad
@@ -55,16 +58,18 @@ Lomos.forEach((lomo) => {
         }
        
     const elementosCarrito = carrito.reduce((acc, { cantidad }) => acc + cantidad, 0)
-    cartProduct.innerHTML = ` <a href="">
-    <img class="logito" src="https://cdn-icons-png.flaticon.com/512/711/711897.png" alt="carrito"> ${elementosCarrito}
-    </a>`
 
-        const saveLocal = () =>{
-            localStorage.setItem("carrito", JSON.stringify(carrito))
-        }
-       
+
+    localStorage.setItem ("cartCantidad", JSON.stringify (elementosCarrito))
+
+    cartProduct.innerHTML = `<a href=""> <h1 >🛒 <strong  id ="counter"> ${JSON.parse(localStorage.getItem ("cartCantidad"))}</strong>
+    </h1></a>`
+
+    
     
     })
 
+
 })
+
 
